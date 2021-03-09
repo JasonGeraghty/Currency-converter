@@ -1,0 +1,19 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+# Authentication Service - map neat URL to internal URL
+RewriteRule ^auth/register/$   authentication/AuthServiceRouter.php?page_key=register [nc,qsa]
+RewriteRule ^auth/register$   authentication/AuthServiceRouter.php?page_key=register [nc,qsa]
+
+RewriteRule ^auth/validate/$   authentication/AuthServiceRouter.php?page_key=validate [nc,qsa]
+RewriteRule ^auth/validate$   authentication/AuthServiceRouter.php?page_key=validate [nc,qsa]
+
+RewriteRule ^auth/renew/$   authentication/AuthServiceRouter.php?page_key=renew [nc,qsa]
+RewriteRule ^auth/renew$   authentication/AuthServiceRouter.php?page_key=renew [nc,qsa]
+
+RewriteRule ^auth/revoke/$   authentication/AuthServiceRouter.php?page_key=revoke [nc,qsa]
+RewriteRule ^auth/revoke$   authentication/AuthServiceRouter.php?page_key=revoke [nc,qsa]
+
+RewriteRule ^auth/getId/$   authentication/AuthServiceRouter.php?page_key=getId [nc,qsa]
+RewriteRule ^auth/getId$   authentication/AuthServiceRouter.php?page_key=getId [nc,qsa]

@@ -1,0 +1,16 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+# Authentication Service - map neat URL to internal URL
+RewriteRule ^latest/$   principal/CurrencyRouter.php?page_key=latest [nc,qsa]
+RewriteRule ^latest$   principal/CurrencyRouter.php?page_key=latest [nc,qsa]
+
+RewriteRule ^history/$   principal/CurrencyRouter.php?page_key=history [nc,qsa]
+RewriteRule ^history$   principal/CurrencyRouter.php?page_key=history [nc,qsa]
+
+RewriteRule ^currencies/$   principal/CurrencyRouter.php?page_key=currencies [nc,qsa]
+RewriteRule ^currencies$   principal/CurrencyRouter.php?page_key=currencies [nc,qsa]
+
+RewriteRule ^logs/$   principal/CurrencyRouter.php?page_key=logs [nc,qsa]
+RewriteRule ^logs$   principal/CurrencyRouter.php?page_key=logs [nc,qsa]
